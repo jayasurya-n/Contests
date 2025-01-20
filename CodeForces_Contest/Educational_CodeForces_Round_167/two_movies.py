@@ -3,6 +3,7 @@ class Solution:
         ans = 0
         a_rating,b_rating = 0,0
         pos,neg = 0,0
+        
         for i in range(n):
             if(a[i]>b[i]):a_rating+=a[i]
             elif(a[i]<b[i]):b_rating+=b[i]

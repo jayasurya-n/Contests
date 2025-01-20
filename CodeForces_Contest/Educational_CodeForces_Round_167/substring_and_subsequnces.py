@@ -10,7 +10,6 @@ class Solution:
             common = max(common,j-i)
         return ans-common
 
-
 t = int(input().strip())
 for i in range(t):
     a = input().strip()
