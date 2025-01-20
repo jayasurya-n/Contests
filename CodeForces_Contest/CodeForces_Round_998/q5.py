@@ -17,7 +17,6 @@ class Solution:
             u,v = list(map(int,input().strip().split()))
             edges_G.append((u-1,v-1))
 
-        
         parent_F = list(range(n))
         parent_G = list(range(n))
         rank_F = [0] * n
@@ -41,8 +40,8 @@ class Solution:
                     rank[root_x] += 1
 
         for u,v in edges_G:union(parent_G,rank_G,u,v)
-        add = remove = 0
         
+        add = remove = 0
         for u,v in edges_F:
             if find(parent_G,u) != find(parent_G,v):remove+= 1
             else:union(parent_F,rank_F,u,v)
@@ -50,8 +49,7 @@ class Solution:
         for u,v in edges_G:
             if find(parent_F,u) != find(parent_F,v):
                 union(parent_F,rank_F,u,v)
-                add+=1
-                
+                add+=1    
         return add+remove
 
 if __name__ == "__main__":
