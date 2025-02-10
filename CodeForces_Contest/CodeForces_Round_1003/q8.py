@@ -11,6 +11,7 @@ def seive(n):
                 if(lp[j]==j):lp[j] = i
     return lp
 
+
 class Solution:
     def run(self):
         n = int(input().strip())
