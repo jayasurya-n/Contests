@@ -3,30 +3,37 @@ from collections import deque, defaultdict
 import sys, heapq, bisect
 from math import ceil, floor, gcd, sqrt, log
 
+si = lambda: input().strip()
+ii = lambda: int(si())
+lsi = lambda: list(input().strip().split())
+lii = lambda: list(map(int,input().strip().split()))
+
 class Solution:
     def run(self):
-        n,M = list(map(int,input().strip().split()))
-        prices = list(map(int,input().strip().split()))
+        n,M = lii()
+        prices = lii()
         
-        prices.sort()  
-        ans = 0 
-        budget = M
+        def check(x):
+            cnt = cost = 0
+            for p in prices:
+                j = (x+p)//(2*p)
+                cnt+=j
+                cost+=j*j*p
+            return (cost,cnt)
+        
+        low = 0
+        high = (2*(floor(sqrt(M/min(prices))))+1)*min(prices)
 
-        for p_i in prices:
-            units = int((budget//p_i)**0.5)
-            ans+=units
-            budget-=(units**2)*p_i
-            if budget<=0:break
-        return ans
-                
+        while(low<=high):
+            mid = (low+high)>>1
+            if(check(mid)[0]<=M):low = mid+1
+            else:high = mid-1
+        
+        return check(high)[1]+(M-check(high)[0])//low
+        
 if __name__ == "__main__":
-    # N = 2*(10**5)+5
-    # mod = 10**9+7
-    # fac = [1]*N
-    # for i in range(1,N):
-    #     fac[i] = (fac[i-1]*i)%mod
-    yes = "YES"
-    no = "NO"
+    # fac = factorial(n=2*(10**5)+5,mod=10**9+7)
+    # yes,no = "YES","NO"
     for _ in range(1):
         ans = Solution().run()
         print(ans)
