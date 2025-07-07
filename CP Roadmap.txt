@@ -1,0 +1,59 @@
+from newbie - 
+
+Time and Space Complexity
+in-built stuff
+Maths (HCF, LCM, Primes,Diviosrs, Multiples)
+Modular Arthemetic
+Recursion
+
+from pupil - 
+
+Binary Search
+Number Theory
+ -Binary Exponentaion
+ -Sieve of Eratosthenes
+ - Eucledian Aglorithm
+
+Prefix Sum
+Greedy
+ -standard greedy
+ -non standard greedy
+
+Ad-Hoc problems
+Upsolve contest
+Give enough contests
+
+from specialist- 
+
+Two pointers
+Advanced Number Theory
+ -fermats and eulers thoerem
+ -combinatorics and mod inverse
+
+Dynamic Programming
+ -Standard and Non standard
+ -DP with Bit masking
+
+
+Graphs
+ -DFS, BFS and Applications
+ -Shortest Path Algorithms
+
+Trees
+ -Basics, Subtree precomputation
+ -Binary Lifting
+
+Solve random DP problems from CF
+Start Proving Approaches
+Start reading blogs and solutions rather than videos
+Avoid learning irrelavant topics
+Start CSES problemset
+
+Solve (current_rating-200 : current_rating+200) level problems
+
+
+
+
+
+
+
